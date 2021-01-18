@@ -29,7 +29,7 @@ controller:
     type: RollingUpdate
   kind: "DaemonSet"
   publishService:
-    enabled: true
+    enabled: false
   priorityClassName: ${local.priority-class-ds["create"] ? kubernetes_priority_class.kubernetes_addons_ds[0].metadata[0].name : ""}
 podSecurityPolicy:
   enabled: false
