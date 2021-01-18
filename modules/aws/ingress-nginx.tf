@@ -83,7 +83,7 @@ controller:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
       service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled: 'true'
-      service.beta.kubernetes.io/aws-load-balancer-type: "nlb-ip"
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
   publishService:
     enabled: true
   priorityClassName: ${local.priority-class-ds["create"] ? kubernetes_priority_class.kubernetes_addons_ds[0].metadata[0].name : ""}
